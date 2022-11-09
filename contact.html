@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/About-Blog.css">
+      <style>
+          body{
+background-image: url(img/bck3.jpg);
+background-repeat: no-repeat;
+ background-attachment: fixed;  
+ background-size: cover;
+}
+      </style>
+</head>
+<body>
+    <div class="TheWhole">
+        <nav class="navbar navbar-expand-lg navbar-dark  ">
+            <div class="container-fluid">  
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               
+                <div class="container text-center">
+           <div class="row">
+                    <div class="col">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                    </div>
+                    <div class="col">
+                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+                </li>
+                    </div>
+                   <div class="col">
+                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">       
+                <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+                </li>
+                  </div>
+                  <div class="col">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">          
+                   <li class="nav-item">
+                   <a class="nav-link" href="about.html">About</a>
+                   </li>
+                     </div>
+                  <div class="col">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">   
+                <li class="nav-item">
+                <a class="nav-link active" href="contact.html">Contact</a>
+                </li>
+                  </div>
+                 
+        </div>        
+                </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+    <div class="container">
+        <div class="row text-center">
+            <p class="contact">CONTACT US</p> 
+        </div>
+    </div>
+    
+    <div class="container my-5">
+        <div class="row bg-dark h-50 text-center ">
+            <div class="col-lg-6 sm-12 bg-dark py-5" >
+                <p class="contact2 text-center">DO you want to become a part of our team?</p>
+                <p class="contact2 text-center"> Or</p>
+                <p class="contact2">DO you have any suggestions for us?</p>
+
+            </div>
+            <div class="col-lg-6 sm-12 bg-dark text-center ">
+                <div class="container-fluid text-center my-4  bg-dark">
+                    <div class="contactForm">
+                        <form>
+                            <h2 class="contact3">Send Message</h2>
+                            <div class="inputBox  text-center">
+                                <label class="contact3" for="emri"> Name</label>
+                                <input type="text" id="emri"required="required" class="bg-dark">
+                            </div>
+                            <div class="inputBox  text-center">
+                                <label class="contact3" for="emri"> Surname</label>
+                                <input type="text" id="emri"required="required" class="bg-dark">
+                            </div>
+                            <div class="inputBox  text-center">
+                                <label for="email" class="contact3">Email </label>
+                                <input id="email" type="email" class="bg-dark" required="required">
+                            </div>
+                            <div class="inputBox  text-center">
+                                <label for="numer" class="contact3">Phone</label>
+                                <input id="numer" class="bg-dark" type="tel" required="required">
+                            </div>
+                            <div class="form-floating bg-dark">
+                                <select class="form-select bg-dark"  style="color: white;" id="floatingSelect" aria-label="Floating label select example">
+                                  <option selected></option>
+                                  <option value="1" >Apply for a position</option>
+                                  <option value="2" >Make a suggestion</option>
+                                  <option value="2" >Make a complaint</option>
+                                </select>
+                                <label for="floatingSelect" class="text-center" style="color: white;">Choose the reason for your application</label>
+                              </div>
+                            <div class="inputBox  text-center">
+                                <span class="text-center contact3" >Write your message!</span>
+                                <textarea required="required" class="bg-dark contact3 text-center"style="width:100%;" ></textarea>                            
+                            </div>
+                            <div class="inputBox pb-4">
+                                <input class="btn dergo btn-dark text-center" onclick="mesazhi()" type="submit" value="Send my Contact" style="width: 50%;">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+function mesazhi(){
+    var dergimi=document.getElementsByClassName("dergo");
+    dergimi=window.alert("Thank You for your appliance!We will try to reply your message as soon as possible!")
+}  
+</script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+*{
+    margin-top: 0%;
+}
+/* STILIZIMET E FAQES BLOG */
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 195px;
+}
+
+.imp1{
+    position: relative;
+    width: 100%;
+}
+.foto2{
+    display: block;
+        display: block;
+        width: 100%;
+        height: auto;
+  
+}
+
+#navbarSupportedContent{
+    margin-left: 0%;
+}
+
+.tekst1{
+    font-family: 'Roboto Mono', monospace;
+    font-size: x-large;
+}
+
+.collapsing{
+    color: aliceblue;
+}
+
+.card{
+   max-height: 100%;
+}
+
+ol{
+  list-style-type: none;
+}
+li{
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* STILIZIMI I FAQES ABOUT */
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .containerd{
+  position: relative;
+  text-align: center;
+  color: white;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+    font-size: 130px;
+    color: white;
+    font-family:'Kanit', sans-serif;
+    align-items: center;
+  }
+ .txt{
+     color: black;
+     font-size: xx-large;
+ }
+
+ .meetteam{
+     position: absolute;
+ }
+ .themiddle{
+     align-items: center;
+     position: relative;
+     color: aliceblue;
+     top: 50%;
+    left: 50%;
+ }
+
+ .tekstii{
+     color: white;
+ }
+ 
+
+ /* STILIZIMI I FOOTERIT */
+ *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+  footer{
+    background: white;
+    height: auto;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 40px;
+    color: rgb(207, 65, 9);
+    
+  }
+  
+  .footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+  
+  }
+  
+  .footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+  }
+  .socials li{
+    margin: 0 10px;
+  }
+  .socials a{
+    text-decoration: none;
+    color: rgb(190, 34, 34);
+  }
+  
+  .socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+  }
+  .socials a:hover i{
+    color: aqua;
+  }
+  
+  .footer-bottom{
+    background: white;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  
+  }
+  .footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+  }
+
+/* STILIZIMI I FAQES KONTAKT */
+.contact{
+  font-family: Georgia, serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  }
+  .contact2{
+  font-family: Georgia, serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: burlywood;
+  }
+  
+  .contact3{
+      color: white;
+  }
+  
+  .contactForm .inputBox input{
+      width: 100%;
+      padding: 5px 0;
+      font-size: 16px;
+      margin: 10px 0;
+      border: none;
+      outline: none;
+      resize: none;
+      border-bottom:  solid;
+  
+  }
+  
+  .contactForm .inputBox input .contact3:focus{
+      color: #e91e63;
+      font-size: 12px;
+      transform: translateY(-20px);
+  }
+  
+  /* Stilizimi i  */
+  

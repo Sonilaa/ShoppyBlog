@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <script src="js/Logic.js" async></script>
+
+    <!-- Lidhja me css -->
+    <link rel="stylesheet" href="css/StyleShop.css">
+    <!--Lidhja me Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- FONTAWSOME IMPLEMENTATION -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="d-flex border ">
+        <div class="p-2 w-100">
+            <nav class="navbar  navbar-expand-lg px-5 ">
+                <div class="container-fluid ">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link  px-5" aria-current="page" href="index.html">Home</a>
+                      <a class="nav-link  px-5" href="blog.html">Blog</a>
+                      <a class="nav-link px-5" href="contact.html">Contact</a>                      
+                      <a class="nav-link px-5" href="about.html">About</a>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Category of Shops
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#carouselExampleControlsNoTouching">Shoes</a></li>
+                          <li><a class="dropdown-item" href="#carouselExampleControlsNoTouching3">Coats</a></li>
+                          <li><a class="dropdown-item" href="#carouselExampleControlsNoTouching2">Top</a></li>
+                          <li><a class="dropdown-item" href="#carouselExampleControlsNoTouching4">Jeans/Trousers</a></li>
+                          <li><a class="dropdown-item" href="#carouselExampleControlsNoTouching6">Hijab</a></li>
+                          <li><a class="dropdown-item" href="#carouselExampleControlsNoTouching5">Accesories</a></li>
+    
+                        </ul>
+                      </li>
+                      <form class="d-flex" role="search">
+                        <input class="form-control me-2 mx-4" type="search" placeholder="Code/Name of product" aria-label="Search">
+                        <button class=" btn btn-outline-dark " onkeyup="search()" id="kerkim" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </div>
+                  
+                </div>
+              </nav>
+        </div>
+        <div  class="p-2 flex-shrink-1 px-5 py-4 tekst1">SHOPPYBLOG</div>
+         
+        <div class="p-2 flex-shrink-1 px-5 py-4  ">
+          <button class="btn btn-dark " id="cart-icon"type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </button>
+         </div>
+        </div>
+<div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header ">
+    <h2 class="section-header text-center offcanvas-title" id="offcanvasScrollingLabel" >CART</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <section class="container-fluid content-section" >
+
+        <div class="cart-row ">
+          <span class="cart-item cart-header cart-column">ITEM</span>
+          <span class="cart-quantity cart-header cart-column mx-2">PRICE</span>
+          <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+        </div>
+      <div class="cart-items">  
+       </div>
+            <div class="cart-total">
+              <strong class="cart-total-title text-center">Total</strong>
+              <span class="cart-total-price text-center">$00.00</span>
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary btn-lg mx-auto d-grid px-5 btn-purchase mt-0 ">Purchase</button>
+        
+      </div>      
+    </section>
+          
+          </div>
+        </div>
+    <div class="container-fluid">
+      <div class="row text-center my-4 ">
+        <div></div>
+        <h1>SHOP NOW</h1>
+      </div>
+    </div>
+
+    <!-- Karuseli -->
+    <div class="container">
+  <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false" data-ds-keyboard="true">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card-wrapper">
+            <div class="card text-center" >
+              <div class="image-wrapper  ">
+              <img src="img/shoes5.jpg" class="card-img-top img-thumbnail" >
+              </div>
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">New Balance</h5>
+                <h6 class="desc">for the love of rose</h6>
+              <h6 class="shop-item-price text-center">$119.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+              </div>
+            </div>
+            <div class="card text-center">
+              <div class="image-wrapper ">  
+              <img src="img/shoes6.jpg" class="card-img-top img-thumbnail"  >
+            </div>
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">New Balance</h5>
+                <h6 class="desc">white edition</h6>
+              <h6 class="shop-item-price">$79.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+              </div>
+            </div>
+            <div class="card text-center" >
+              <div class="image-wrapper  ">
+              <img src="img/shoes7.jpg" class="card-img-top img-thumbnail" alt="...">
+            </div>
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Addidas</h5>
+                <h6 class="desc">nude in love</h6>
+              <h6 class="shop-item-price">$99.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+              </div>
+              </div>
+              <div class="card text-center" >
+                <div class="image-wrapper ">
+                <img src="img/shoes8.jpg" class="card-img-top img-thumbnail" >
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title shop-item-title ">New Balance </h5>
+                  <h6 class="desc">always winning</h6>
+              <h6 class="shop-item-price">$199.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+                </div>   
+            </div>
+                                    
+          </div>
+        </div>
+        <div class="carousel-item ">
+         <div class="card-wrapper">
+          <div class="card text-center">
+            <div class="image-wrapper  ">
+              <img src="img/shoes4.jpg" class="card-img-top img-thumbnail">
+            </div>
+              <div class="card-body">
+                <h5 class="card-title shop-item-title " >Pretty Little Things</h5>
+                <h6>living in a dream</h6>
+                <h6 class="shop-item-price">$59.99</h6>
+                <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+              </div>
+          </div>
+          <div class="card text-center" >
+           <div class="image-wrapper  ">
+            <img src="img/shoes1.jpg" class="card-img-top img-thumbnail " >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Revolve</h5>
+              <h6>party all night</h6>
+              <h6 class="shop-item-price">$39.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/shoes2.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Revolve</h5>
+              <h6>dressed like a daydream</h6>
+              <h6 class="shop-item-price">$35.00</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>
+          <div class="card text-center" >
+          <div class="image-wrapper">
+            <img src="img/shoes3.jpg" class="card-img-top img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">New Bottega</h5>
+              <h6>girl power!</h6>
+              <h6 class="shop-item-price">$199.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+         </div>
+        </div>
+  </div>   
+    </div>   
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" data-bs-target="#carouselExampleDark" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+    
+  <!-- Karusel number2 -->
+  <div class="container">
+    <div id="carouselExampleControlsNoTouching2" class="carousel slide my-5" data-bs-touch="false"  data-bs-interval="false" data-ds-keyboard="true">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card-wrapper">
+            <div class="card text-center" >
+              <div class="image-wrapper">
+              <img src="img/bluz1.jpg" class="card-img-top  img-thumbnail" >
+            </div>
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Zara</h5>
+                <h6>the "zebra" in winter</h6>
+                <h6 class="shop-item-price">$14.99</h6>
+                <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+              </div>
+            </div>
+            <div class="card text-center" >
+              <div class="image-wrapper">
+              <img src="img/bluz6.jpg" class="card-img-top  img-thumbnail" >
+            </div>
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Zara</h5>
+                <h6>barbie in winterland</h6>
+                <h6 class="shop-item-price">$13.99</h6>
+                <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+              </div>
+            </div>
+            <div class="card text-center" >
+              <div class="image-wrapper">
+              <img src="img/bluz4.jpg" class="card-img-top  img-thumbnail" >
+            </div>
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">New Yorkers</h5>
+                <h6>cozy in the first place</h6>
+                <h6 class="shop-item-price">$11.99</h6>
+                <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+              </div>
+            </div>
+            <div class="card text-center" >
+              <div class="image-wrapper">
+              <img src="img/bluz7.jpg" class="card-img-top  img-thumbnail" >
+            </div>
+              <div class="card-body">
+                <h5 class="card-title shop-item-title">Bershka</h5>
+                <h6>summer in autumn</h6>
+                <h6 class="shop-item-price">$9.99</h6>
+                <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+              </div>
+            </div>                
+          </div>
+        </div>
+        <div class="carousel-item ">
+         <div class="card-wrapper">
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/bluz3.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Bershka</h5>
+              <h6>casual at work</h6>
+              <h6 class="shop-item-price">$5.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>        
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/bluz2.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Bershka</h5>
+              <h6>casual</h6>
+              <h6 class="shop-item-price">$9.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>        
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/bluz8.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Bershka</h5>
+              <h6> classy winter-ing </h6>
+              <h6 class="shop-item-price">$11.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/bluz5.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">H&M</h5>
+              <h6> oversized & cute </h6>
+              <h6 class="shop-item-price">$7.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>   
+        
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"  aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching2" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div> 
+<!-- Karusel number3 -->
+<div class="container">
+  <div id="carouselExampleControlsNoTouching3" class="carousel slide my-5" data-bs-touch="false"  data-bs-interval="false" data-ds-keyboard="true">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card-wrapper">
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/pallto2.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">H&M</h5>
+              <h6> always classy </h6>
+              <h6 class="shop-item-price">$45.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/pallto3.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Zara</h5>
+              <h6>bossy is our thing</h6>
+              <h6 class="shop-item-price">$57.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/pallto4.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Bershka</h5>
+              <h6>army of love</h6>
+              <h6 class="shop-item-price">$46.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/pallto5.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Bershka</h5>
+              <h6>spring in autumn</h6>
+              <h6 class="shop-item-price">$7.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>                      
+        </div>
+      </div>
+      <div class="carousel-item ">
+       <div class="card-wrapper">
+        <div class="card text-center" >
+          <div class="image-wrapper">
+          <img src="img/pallto1.jpg" class="card-img-top  img-thumbnail" >
+        </div>
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">Zara</h5>
+            <h6>take me everywhere</h6>
+            <h6 class="shop-item-price">$10.99</h6>
+            <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+          </div>
+        </div>  
+        <div class="card text-center" >
+          <div class="image-wrapper">
+          <img src="img/pallto6.jpg" class="card-img-top  img-thumbnail" >
+        </div>
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">H&M</h5>
+            <h6> oldschool-ing </h6>
+            <h6 class="shop-item-price">$37.99</h6>
+            <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+          </div>
+        </div> 
+        <div class="card text-center" >
+          <div class="image-wrapper">
+          <img src="img/pallto7.jpg" class="card-img-top  img-thumbnail" >
+        </div> 
+        <div class="card-body">
+          <h5 class="card-title shop-item-title">H&M</h5>
+          <h6> never out of fashion</h6>
+          <h6 class="shop-item-price">$21.99</h6>
+          <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+        </div>
+      </div>  
+      </div>
+    </div>
+  </div>   
+      
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching3" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"  aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching3" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div> 
+
+<!-- Karusel number4 -->
+<div class="container">
+  <div id="carouselExampleControlsNoTouching4" class="carousel slide my-5" data-bs-touch="false"  data-bs-interval="false" data-ds-keyboard="true">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card-wrapper">
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/jeans1.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Zara</h5>
+              <h6> cozy above all </h6>
+              <h6 class="shop-item-price">$10.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/jeans3.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Zara</h5>
+              <h6>white edition</h6>
+              <h6 class="shop-item-price">$9.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/jeans2.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Bershka</h5>
+              <h6>the kid of fashion</h6>
+              <h6 class="shop-item-price">$11.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/jeans4.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Bershka</h5>
+              <h6>frsh from the 90s</h6>
+              <h6 class="shop-item-price">$7.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>                      
+        </div>
+      </div>
+      <div class="carousel-item ">
+       <div class="card-wrapper">
+        <div class="card text-center" >
+          <div class="image-wrapper">
+          <img src="img/jeans5.jpg" class="card-img-top  img-thumbnail" >
+        </div>
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">Zara</h5>
+            <h6>take me everywhere</h6>
+            <h6 class="shop-item-price">$10.99</h6>
+            <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+          </div>
+        </div>  
+        <div class="card text-center" >
+          <div class="image-wrapper">
+          <img src="img/jeans6.jpg" class="card-img-top  img-thumbnail" >
+        </div>
+          <div class="card-body">
+            <h5 class="card-title shop-item-title">H&M</h5>
+            <h6> oldschool-ing </h6>
+            <h6 class="shop-item-price">$10.99</h6>
+            <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+          </div>
+        </div> 
+        
+      </div>
+    </div>
+  </div>   
+      
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching4" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"  aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching4" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div> 
+
+
+<!-- Karusel number5 -->
+<div class="container">
+  <div id="carouselExampleControlsNoTouching5" class="carousel slide my-5" data-bs-touch="false"  data-bs-interval="false" data-ds-keyboard="true">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card-wrapper">
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/ac1.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Balenciaga</h5>
+              <h6> metalika </h6>
+              <h6 class="shop-item-price">$15.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/ac2.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Sisters Sand Seekers</h5>
+              <h6>toteBags our future</h6>
+              <h6 class="shop-item-price">$5.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/ac3.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">H&M</h5>
+              <h6>above clouds</h6>
+              <h6 class="shop-item-price">$14.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/ac4.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Sisters Sand Seekers</h5>
+              <h6>dope-ing</h6>
+              <h6 class="shop-item-price">$7.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>                      
+        </div>
+      </div>
+    
+      </div>
+    </div>
+  </div>   
+      
+  </div>
+</div> 
+
+<!-- Karusel number6 -->
+<div class="container">
+  <div id="carouselExampleControlsNoTouching6" class="carousel slide my-5" data-bs-touch="false"  data-bs-interval="false" data-ds-keyboard="true">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="card-wrapper">
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/hijab1.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Fresh Scarfs</h5>
+              <h6> sun </h6>
+              <h6 class="shop-item-price">$10.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/hijab2.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Fresh Scarfs</h5>
+              <h6>moon</h6>
+              <h6 class="shop-item-price">$10.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/hijab3.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Fresh Scarfs</h5>
+              <h6>stars</h6>
+              <h6 class="shop-item-price">$10.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>  
+          <div class="card text-center" >
+            <div class="image-wrapper">
+            <img src="img/hijab4.jpg" class="card-img-top  img-thumbnail" >
+          </div>
+            <div class="card-body">
+              <h5 class="card-title shop-item-title">Fresh Scarfs</h5>
+              <h6>universe</h6>
+              <h6 class="shop-item-price">$10.99</h6>
+              <a href="#" class="btn btn-dark shop-item-button btn-sm mx-sm-auto">Add to Card</a>
+            </div>
+          </div>                      
+        </div>
+      </div>
+    
+      </div>
+    </div>
+  </div>   
+      
+  </div>
+</div> 
+<footer class="bg-dark">
+  <div class="footer-content " >
+      <h3>For more information</h3>
+      <p>Navigate more through our socials!For any question please don't hesitate to contact us!</p>
+      <ul class="socials">
+          <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="https://www.youtube.com/watch?v=DtVBCG6ThDk"><i class="fa fa-youtube"></i></a></li>
+      </ul>
+  </div>
+  <div class="footer-bottom bg-dark" >
+      <p>copyright&copy;2022 ShoppyBlog.</p>
+  </div>
+</footer>
+   
+
+
+
+
+    <!-- Lidhja me JavaScript -->
+    <script src="js/prov.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
